@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js'],
+  purge: { layers: ['utilities', 'base', 'components'], content: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'] },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
