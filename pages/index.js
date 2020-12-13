@@ -102,7 +102,7 @@ export default function Home() {
 
       <main>
         <div className="min-h-100 w-full flex items-center justify-center font-sans">
-          <div className=" bg-gray-100 rounded shadow p-4 mt-3 w-full lg:w-4/5 lg:max-w-lg">
+          <div className=" bg-gray-100 rounded shadow p-4 mt-3 mb-3 w-full lg:w-4/5 lg:max-w-lg">
             <div className="mb-4">
               <h1 className="text-grey-darkest">Todo List</h1>
               <form className="w-full" action="" onSubmit={handleSubmit}>
@@ -140,6 +140,6 @@ export default function Home() {
           </span>
         </div> : null
       }
-    </div >
+    </div>
   )
 }

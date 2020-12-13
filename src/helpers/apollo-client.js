@@ -6,15 +6,15 @@ import { WebSocketLink } from "apollo-link-ws";
 import { getMainDefinition } from 'apollo-utilities'
 
 const wsLink = process.browser ? new WebSocketLink({ // if you instantiate in the server, the error will be thrown
-  uri: `ws://localhost:4000`,
+  uri: process.env.gql_ws_url,
   options: {
     reconnect: true
   }
 }) : null;
 
 const httplink = new HttpLink({
-	uri: 'http://localhost:4000',
-	credentials: 'same-origin'
+  uri: process.env.gql_url,
+  credentials: 'same-origin'
 });
 
 const link = process.browser ? split( //only create the split in the browser
